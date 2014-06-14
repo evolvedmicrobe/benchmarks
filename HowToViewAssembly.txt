@@ -1,0 +1,10 @@
+To view the emitted assembly in mono simply:
+
+mono -v -v commands > Mono.asm
+
+
+In java
+
+sudo java -cp .:../ -XX:+UnlockDiagnosticVMOptions -XX:+PrintAssembly nbody 5000000 > Java.asm
+
+make sure to move the .so file into the relevant folder before hand.
