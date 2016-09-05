@@ -93,6 +93,7 @@ typedef uint32_t              u_int32_t;
 typedef uint64_t              u_int64_t;
 
 ////////////////// FROM math_private.h   /////////////////////
+#ifndef _MSC_VER
 /* These definitions should be provided directly by GCC and Clang.  */
 #if !(defined(__BYTE_ORDER__) && defined(__ORDER_LITTLE_ENDIAN__) && defined(__ORDER_BIG_ENDIAN__))
 #error The compiler needs to define the byte order
@@ -104,6 +105,8 @@ typedef uint64_t              u_int64_t;
  * A union which permits us to convert between a double and two 32 bit
  * ints.
  */
+#endif 
+
 
 #if __FLOAT_WORD_ORDER__ == __ORDER_BIG_ENDIAN__
 
