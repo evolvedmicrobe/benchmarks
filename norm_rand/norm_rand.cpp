@@ -1,4 +1,8 @@
-#include <cmath>
+//#include <cmath>
+//#include "openlibm.h"
+#include <stdio.h>
+#include "fast_log.h"
+
 
 unsigned int m_z = 50;
 unsigned int m_w = 2131212;
@@ -16,10 +20,9 @@ int main() {
 	for(int i = 0; i < 100000000; i++) {
 		double u = runif();
 		double t = log(u);
-		if (i % 1000 == 0) {
-			q += t;
-		}
+		q += t;
 	}
+	printf("%f", q);
 	return (int)q;
 }
 
